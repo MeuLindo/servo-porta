@@ -52,11 +52,15 @@ void loop() {
     Serial.println("Ola Meulindo !");
     
     if (aberto){
-        Chave.write(0);
+        Chave.writeMicroseconds(1600);  
+        delay(4240);
+        Chave.writeMicroseconds(1500);
         aberto = false;  
     }
     else{
-        Chave.write(180);
+        Chave.writeMicroseconds(1300);  
+        delay(4240);
+        Chave.writeMicroseconds(1500);
         aberto = true;
       }
     
